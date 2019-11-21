@@ -13,6 +13,7 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
+    'no-param-reassign': 'off',
     'class-methods-use-this': 'off',
     'no-params-reassign': 'off',
     camelcase: 'off',
