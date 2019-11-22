@@ -16,6 +16,9 @@ export default async (req, res, next) => {
 
     return next();
   } catch (e) {
+    if (e.name === 'TokenExpiredError') {
+      return res.status(401).json({ error: 'Token Expired' });
+    }
     return res.status(401).json({ error: 'Token Invalid' });
   }
 };
