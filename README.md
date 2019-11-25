@@ -5,13 +5,13 @@ Create Migration run:
 
 DOCKER RUN APP COMMAND:
 
-docker build -t sucrase-app .
+docker build -t go-barber .
 
 docker run \
  --net='host' \
- --name=sucrase-app \
+ --name=go-barber \
  --log-opt max-size=10m \
  --log-opt max-file=5 \
  -p 3333:3333 \
  -d \
- --restart=unless-stopped sucrase-app
+ --restart=unless-stopped go-barber
