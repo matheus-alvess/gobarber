@@ -49,6 +49,12 @@ class AppointmentController {
 
     const { provider_id, date } = req.body;
 
+    if (provider_id === req.userId) {
+      return res.status(401).json({
+        error: 'You cannot register a schedule for yourself.',
+      });
+    }
+
     const checkIsProvider = await User.findOne({
       where: { id: provider_id, provider: true },
     });
@@ -98,7 +104,7 @@ class AppointmentController {
 
     const formatedDate = format(
       hoursStart,
-      "'dia' dd 'de' MMMM 'às' hh':'mm'h'",
+      "'dia' dd 'de' MMMM 'às' HH':'mm'h'",
       {
         locale: pt,
       }
