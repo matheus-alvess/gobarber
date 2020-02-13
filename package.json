@@ -33,12 +33,12 @@
     "yup": "^0.28.0"
   },
   "devDependencies": {
-    "eslint": "^5.16.0",
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-config-prettier": "^6.6.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-prettier": "^3.1.1",
-    "nodemon": "^1.19.4",
-    "prettier": "^1.19.1"
+    "eslint": "5.16.0",
+    "eslint-config-airbnb-base": "14.0.0",
+    "eslint-config-prettier": "6.6.0",
+    "eslint-plugin-import": "2.18.2",
+    "eslint-plugin-prettier": "3.1.1",
+    "nodemon": "1.19.4",
+    "prettier": "1.19.1"
   }
 }
